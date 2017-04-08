@@ -28,6 +28,11 @@ public class BookController {
         return (id != null ? repository.findOne(id) : new Book());
     }
 	*/
+	//login
+	 @RequestMapping(value="/login")
+	    public String login() {	
+	        return "login";
+	    }	
 	
 	//show all books
     @RequestMapping(value="/booklist", method = RequestMethod.GET)
