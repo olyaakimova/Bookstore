@@ -6,7 +6,7 @@
 	<groupId>fi.haagehelia.course</groupId>
 	<artifactId>Bookstore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>Bookstore</name>
 	<description>Bookstore project</description>
@@ -76,16 +76,21 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-security-test-4.2.2.RELEASE.jar</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <groupId>org.springframework.boot</groupId>
+				 <artifactId>spring-boot-maven-plugin</artifactId>
+				 <configuration>
+				 <jvmArguments>
+				 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
+				 </jvmArguments>
+				 </configuration>
 			</plugin>
 		</plugins>
 	</build>
