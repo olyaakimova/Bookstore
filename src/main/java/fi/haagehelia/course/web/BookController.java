@@ -32,7 +32,7 @@ public class BookController {
 	//login
 	 @RequestMapping(value="/login")
 	    public String login() {	
-		 return "redirect:booklist";
+	        return "login";
 	    }	
 	
 	//show all books
