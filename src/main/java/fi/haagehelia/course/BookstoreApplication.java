@@ -6,8 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 import fi.haagehelia.course.domain.Book;
@@ -19,12 +17,8 @@ import fi.haagehelia.course.domain.UserRepository;
 import fi.haagehelia.course.BookstoreApplication;
 
 @SpringBootApplication
-public class BookstoreApplication  extends SpringBootServletInitializer {
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder
-	application) {
-	return application.sources(BookstoreApplication.class);
-	}
+public class BookstoreApplication {
+	
 	private static final Logger log = LoggerFactory.getLogger(BookstoreApplication.class);
 	
 	public static void main(String[] args) {
