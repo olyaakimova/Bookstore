@@ -32,8 +32,10 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 			.anyRequest().authenticated()
 			.and()
 			.formLogin()
-			.loginPage("/login")
-			.permitAll()
+            .loginPage("/login")                       //login-page
+            //.failureUrl("/login.html?status=LOGIN_FAILURE") //authentication-failure-url
+            .defaultSuccessUrl("/booklist", false) //default-target-url. set always-use-default-target to `false`
+            .permitAll()
 			.and()
 			.logout()
 			.permitAll();
